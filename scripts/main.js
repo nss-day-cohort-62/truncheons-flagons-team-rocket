@@ -1,8 +1,7 @@
 import { fetchPlayers, fetchScores, fetchTeams } from "./dataAccess.js"
-
+import { TruncheonsAndFlagons } from "./TruncheonsAndFlagons.js"
 
 const mainContainer = document.querySelector("#container")
-
 
 mainContainer.addEventListener(
     "stateChanged",
@@ -19,7 +18,7 @@ export const render = () => {
         () => fetchScores())
     .then(
         () => {
-            mainContainer.innerHTML = TruncheonsAndDragons()
+            mainContainer.innerHTML = TruncheonsAndFlagons()
         }
     )
 }
