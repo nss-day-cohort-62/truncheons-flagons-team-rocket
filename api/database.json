@@ -1,17 +1,76 @@
 {
-    "teams": [
-        {"id": 1, "name": "Team Rocket", "dateCreated": "01/20/2023"},
-        {"id": 2, "name": "Joshua Tree", "dateCreated": "02/06/2023"},
-        {"id": 3, "name": "Yosemite", "dateCreated": "01/27/2023"}
-    ],
-    "players": [
-        {"id": 1, "firstName": "Hannah", "lastName": "Collins", "stateOfOrigin": "Indiana", "teamId": 1 },
-        {"id": 2, "firstName": "Jackson", "lastName": "Henderson", "stateOfOrigin": "Kentucky", "teamId": 1 },
-        {"id": 3, "firstName": "Vision", "lastName": "Filler", "stateOfOrigin": "Texas", "teamId": 1 }
-    ],
-    "teamScores": [
-        {"id": 1, "teamId": 1, "date": "02/06/2023", "score": 2 },
-        {"id": 2, "teamId": 2, "date": "02/06/2023", "score": 1 },
-        {"id": 3, "teamId": 3, "date": "02/06/2023", "score": 0 }
-    ]
+  "teams": [
+    {
+      "id": 1,
+      "name": "Team Rocket",
+      "dateCreated": "01/20/2023"
+    },
+    {
+      "id": 2,
+      "name": "Joshua Tree",
+      "dateCreated": "02/06/2023"
+    },
+    {
+      "id": 3,
+      "name": "Yosemite",
+      "dateCreated": "01/27/2023"
+    },
+    {
+      "name": "Yellowstone",
+      "dateCreated": "2/6/2023",
+      "id": 4
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "firstName": "Hannah",
+      "lastName": "Collins",
+      "teamId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Jackson",
+      "lastName": "Henderson",
+      "teamId": 1
+    },
+    {
+      "id": 3,
+      "firstName": "Vision",
+      "lastName": "Filler",
+      "teamId": 1
+    },
+    {
+      "firstName": "Braxton",
+      "lastName": "Smith",
+      "teamId": 4,
+      "id": 4
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "teamId": 1,
+      "date": "02/06/2023",
+      "score": 2
+    },
+    {
+      "id": 2,
+      "teamId": 2,
+      "date": "02/06/2023",
+      "score": 1
+    },
+    {
+      "id": 3,
+      "teamId": 3,
+      "date": "02/06/2023",
+      "score": 0
+    },
+    {
+      "id": 1,
+      "teamId": 1,
+      "date": "02/07/2023",
+      "score": 2
+    }
+  ]
 }
