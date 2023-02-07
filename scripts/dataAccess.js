@@ -1,5 +1,5 @@
 const applicationState = {
-    gameScores: {round: 0},
+    roundNumber: {round: 0},
     team1: {score: 0},
     team2: {score:0},
     team3: {score:0}
@@ -49,8 +49,8 @@ export const getTeam2 = () => {
 export const getTeam3 = () => {
     return applicationState.team3
 }
-export const getRoundScores = () => {
-    return applicationState.gameScores
+export const getRoundNumber = () => {
+    return applicationState.roundNumber
 }
 
 export const setTeam1 = (id) => {
@@ -64,6 +64,15 @@ export const setTeam2 = (id) => {
 export const setTeam3 = (id) => {
     applicationState.team3.id = id
     //document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+}
+export const setTeam1Score = (score) => {
+    applicationState.team1.score += score
+}
+export const setTeam2Score = (score) => {
+    applicationState.team2.score += score
+}
+export const setTeam3Score = (score) => {
+    applicationState.team3.score += score
 }
 
 export const sendTeam = (teamToSend) => {
@@ -94,6 +103,40 @@ export const sendPlayer = (playerToSend) => {
 
 
     return fetch(`${API}/players`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+        })
+}
+
+export const sendScore = (scoreToSend) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(scoreToSend)
+    }
+
+
+    return fetch(`${API}/scores`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+        })
+}
+
+export const changeTeamScore = (objectId, object) => {
+    const fetchOptions = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(object)
+    }
+
+
+    return fetch(`${API}/scores/${objectId}`, fetchOptions)
         .then(response => response.json())
         .then(() => {
             document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))

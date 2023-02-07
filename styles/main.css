@@ -75,3 +75,52 @@ h1 {
  h3 {
     font-weight: 1000;
 }
+.teamScore {
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin: 0px;
+
+}
+.teamScore p {
+    margin-right: 20px;
+}
+
+.forms button {
+    background-color: green;
+    margin: 10px;
+    color: cornsilk;
+    border: 2px ridge grey;
+    padding: 8px;
+}
+.game button{
+    background-color: cornsilk;
+    margin: 10px;
+    color: green;
+    border: 2px ridge grey;
+    padding: 8px;
+    margin-left: 250px;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px; /*Half the value of width to center div*/
+    margin-top: -250px; /*Half the value of height to center div*/
+    z-index: 200;
+}
