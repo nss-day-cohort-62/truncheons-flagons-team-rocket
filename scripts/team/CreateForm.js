@@ -21,11 +21,12 @@ mainContainer.addEventListener("click", clickEvent => {
         const teamName = document.querySelector("input[name='teamName']").value
         const dateCreated = new Date().toLocaleDateString()
 
-        const dataToSendToAPI = {
+        const dataToSendToTeamList = {
             name: teamName,
             dateCreated: dateCreated
         }
 
-        sendTeam(dataToSendToAPI)
+        sendTeam(dataToSendToTeamList)
+
     }
 })
