@@ -4,18 +4,18 @@ export const Leaderboard = () => {
     const teams = getTeams()
 
     
-    let html = `<ul class='list'>
-    <li class='listItem'>
-        <p>Teams:</p>
-        <p>Players:</p>
-        <p>Scores:</p>
-    </li>`
+    let html = `<table class='list'>
+    <tr class='listItem'>
+        <th>Teams:</th>
+        <th>Players:</th>
+        <th>Scores:</th>
+    </tr>`
     
     const listItems = teams.map(TeamStat)
 
     html += listItems.join('')
 
-    html += '</ul>'
+    html += '</table>'
 
     return html
 }
@@ -24,11 +24,11 @@ export const TeamStat = (team) => {
     const scores = getScores()
     const players = getPlayers()
 
-    let html = `<li class='listItem'>
-    <p>${team.name}</p>`
+    let html = `<tr class='listItem'>
+    <td>${team.name}</td>`
 
     const playerArray = players.filter(player => (player.teamId === team.id))
-    html += `<p>${playerArray.length}</p>`
+    html += `<td>${playerArray.length}</td>`
 
     const scoreArray = scores.filter(score => (score.teamId === team.id))
     
@@ -38,7 +38,7 @@ export const TeamStat = (team) => {
         totalScore += score.score
     }
 
-    html += `<p>${totalScore}</p>`
+    html += `<td>${totalScore}</td></tr>`
 
     return html
 }

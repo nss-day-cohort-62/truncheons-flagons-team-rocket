@@ -1,9 +1,77 @@
-.list{
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
+body{
+    font-family: 'UnifrakturCook', cursive;
+    background-color:navajowhite
+
+}
+.forms {
+    display: flex;
+    flex-direction: column;;
+    height: 100%;
+    border-right: 1px dotted black;
+    align-items: stretch;
+    background-color:aliceblue;
+
+}   
+.newTeamForm {
+    padding-top: 10px;
+    margin:10px;
+    text-align: center;
+}
+.newPlayerForm {
+    padding-top: 10px;
+    margin:10px;
+    text-align: left;
+
+}
+.newPlayerForm h3 {
+    text-align: center;
+}
+#container{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    
+}
+.currentGame {
+    border: 1px solid black;
+    padding-top:25px;
+    padding-bottom:25px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.currentGameBox{
+    margin-top:10px;
+    text-align: center;
+}
+.newTeamForm {
     display: flex;
     flex-direction: column;
 }
+.leaderBoard{
+    padding-top: 10px;
+    padding-bottom:55px;
+    margin-right: 10px;
+    
+}
 
-.listItem {
-    display: flex;
-    flex-direction: row;
+.leaderBoard h3{
+    text-align: center;
+}
+.game  {
+    margin-left: 300px;
+    margin-top: 100px;
+   
+}
+
+h1 {
+    font-size: 4em;
+    ;
+}
+.game button {
+    margin-left: 250px;
+}
+ h3 {
+    font-weight: 1000;
 }

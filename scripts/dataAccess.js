@@ -1,8 +1,8 @@
 const applicationState = {
-    gameScores: {},
-    team1: {},
-    team2: {},
-    team3: {}
+    gameScores: {round: 0},
+    team1: {score: 0},
+    team2: {score:0},
+    team3: {score:0}
 }
 
 const API = "http://localhost:8088"
@@ -49,18 +49,21 @@ export const getTeam2 = () => {
 export const getTeam3 = () => {
     return applicationState.team3
 }
+export const getRoundScores = () => {
+    return applicationState.gameScores
+}
 
 export const setTeam1 = (id) => {
     applicationState.team1.id = id
-    document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+    //document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const setTeam2 = (id) => {
     applicationState.team2.id = id
-    document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+   // document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const setTeam3 = (id) => {
     applicationState.team3.id = id
-    document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
+    //document.querySelector("#container").dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 export const sendTeam = (teamToSend) => {

@@ -7,14 +7,24 @@ export const TruncheonsAndFlagons = () => {
     return `
     <div class='forms'>
     ${CreateForm()}
+    <div class = "newPlayerForm">
+    <h3> New Player </h3>
     ${CreatePlayer()}
-    <h2>Current Game</h2>
-    <div class='currentGame'>
     </div>
+    <div class="currentGameBox">
+    <h3>Current Game</h3>
+    <div class='currentGame'> No game in progress...
+    </div>
+    </div>
+
+    <div class="leaderBoard">
+    <h3>LeaderBoard</h3>
     ${Leaderboard()}
     </div>
+    </div>
+
     <div class='game'>
-        <h1>Truncheons and Flagons</h1>
+        <h1>Truncheons & Flagons</h1>
         <div class='gameplay'>
         <button id='gameButton'>Start Game</button>
         </div>
