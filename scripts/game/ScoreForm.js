@@ -177,13 +177,14 @@ export const EndCurrentGame = () => {
         foundTeamOne.score += team1.score
         changeTeamScore(foundTeamOne.id, foundTeamOne)
     } else {
-        const score = 0
+        let score = 0
         const dataToSendToAPI = {
             teamId: team1.id,
             score: score
         }
         sendScore(dataToSendToAPI)
-        let foundTeamOne = scores.find((score) => { return team1.id === score.teamId })
+        let getUpdatedScores = getScores()
+        let foundTeamOne = getUpdatedScores.find((score) => { return team1.id === score.teamId })
         foundTeamOne.score = team1.score
         changeTeamScore(foundTeamOne.id, foundTeamOne)
     }
@@ -193,13 +194,14 @@ export const EndCurrentGame = () => {
         foundTeamTwo.score += team2.score
         changeTeamScore(foundTeamTwo.id, foundTeamTwo)
     } else {
-        const score = 0
+        let score = 0
         const dataToSendToAPI = {
             teamId: team2.id,
             score: score
         }
         sendScore(dataToSendToAPI)
-        let foundTeamTwo = scores.find((score) => { return team2.id === score.teamId })
+        let getUpdatedScores = getScores()
+        let foundTeamTwo = getUpdatedScores.find((score) => { return team2.id === score.teamId })
         foundTeamTwo.score = team2.score
         changeTeamScore(foundTeamTwo.id, foundTeamTwo)
 
@@ -209,13 +211,14 @@ export const EndCurrentGame = () => {
         foundTeamThree.score += team3.score
         changeTeamScore(foundTeamThree.id, foundTeamThree)
     } else {
-        const score = 0
+        let score = 0
         const dataToSendToAPI = {
             teamId: team3.id,
             score: score
         }
         sendScore(dataToSendToAPI)
-        let foundTeamThree = scores.find((score) => { return team3.id === score.teamId })
+        let getUpdatedScores = getScores()
+        let foundTeamThree = getUpdatedScores.find((score) => { return team3.id === score.teamId })
         foundTeamThree.score = team3.score
         changeTeamScore(foundTeamThree.id, foundTeamThree)
     }
@@ -247,10 +250,10 @@ export const EndCurrentGame = () => {
 export const popUpText = (textString) => {
     let html = `<div id="overlay">
     <div id="popup">
+    <button id="popupclose">X</button>
     <div class="popupcontent">
         <h1>${textString}</h1>
     </div>
-    <button id="popupclose">X</button>
 </div>
 </div>
 `
