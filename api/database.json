@@ -39,6 +39,16 @@
       "name": "test",
       "dateCreated": "2/8/2023",
       "id": 8
+    },
+    {
+      "name": "test2",
+      "dateCreated": "2/8/2023",
+      "id": 9
+    },
+    {
+      "name": "test3",
+      "dateCreated": "2/8/2023",
+      "id": 10
     }
   ],
   "players": [
@@ -108,7 +118,7 @@
       "id": 3,
       "teamId": 3,
       "date": "02/06/2023",
-      "score": 46
+      "score": 49
     },
     {
       "id": 4,
@@ -123,18 +133,28 @@
     },
     {
       "teamId": 6,
-      "score": 11,
+      "score": 16,
       "id": 6
     },
     {
       "teamId": 7,
-      "score": 4,
+      "score": 6,
       "id": 7
     },
     {
       "teamId": 8,
       "score": 0,
       "id": 8
+    },
+    {
+      "teamId": 9,
+      "score": 0,
+      "id": 9
+    },
+    {
+      "teamId": 10,
+      "score": 0,
+      "id": 10
     }
   ]
 }

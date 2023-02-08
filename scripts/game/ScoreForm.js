@@ -182,11 +182,12 @@ export const EndCurrentGame = () => {
             teamId: team1.id,
             score: score
         }
-        sendScore(dataToSendToAPI)
-        let getUpdatedScores = getScores()
-        let foundTeamOne = getUpdatedScores.find((score) => { return team1.id === score.teamId })
+        sendScore(dataToSendToAPI).then(() => {
+        //let getUpdatedScores = getScores()
+        let foundTeamOne = scores.find((score) => { return team1.id === score.teamId })
         foundTeamOne.score = team1.score
         changeTeamScore(foundTeamOne.id, foundTeamOne)
+    })
     }
 
     if (scores.map(score => score.teamId).includes(team2.id)) {
@@ -199,12 +200,12 @@ export const EndCurrentGame = () => {
             teamId: team2.id,
             score: score
         }
-        sendScore(dataToSendToAPI)
+        sendScore(dataToSendToAPI).then(() => {
         let getUpdatedScores = getScores()
         let foundTeamTwo = getUpdatedScores.find((score) => { return team2.id === score.teamId })
         foundTeamTwo.score = team2.score
         changeTeamScore(foundTeamTwo.id, foundTeamTwo)
-
+        })
     }
     if (scores.map(score => score.teamId).includes(team3.id)) {
         let foundTeamThree = scores.find((score) => { return team3.id === score.teamId })
@@ -216,11 +217,12 @@ export const EndCurrentGame = () => {
             teamId: team3.id,
             score: score
         }
-        sendScore(dataToSendToAPI)
+        sendScore(dataToSendToAPI).then(() => {
         let getUpdatedScores = getScores()
         let foundTeamThree = getUpdatedScores.find((score) => { return team3.id === score.teamId })
         foundTeamThree.score = team3.score
         changeTeamScore(foundTeamThree.id, foundTeamThree)
+        })
     }
 
     if ((team1.score > team2.score) && (team1.score > team3.score)){
